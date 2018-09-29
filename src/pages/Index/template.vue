@@ -1,10 +1,11 @@
 <template>
   <div id="index">
-    <p>首页</p> 
+    <p>首页</p>
+    <p class="theme">我是主题色</p> 
   </div>
 </template>
 
 <script src='./template.js'></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src='./template.css'></style>
+<style scoped lang='less' src='./template.less'></style>
