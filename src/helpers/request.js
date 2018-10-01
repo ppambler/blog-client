@@ -1,7 +1,6 @@
 import axios from 'axios'
 // 由于此文件没有Vue实例，所以需要引入
 import { Message } from 'element-ui'
-import { resolve } from 'path';
 
 // 它的存在给你使用相对路径的机会
 axios.defaults.baseURL = 'http://blog-server.hunger-valley.com'
