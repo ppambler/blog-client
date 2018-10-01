@@ -25,11 +25,12 @@ export default function request(url, type = 'GET', data = {}) {
         }
 
         // 发送ajax请求
-        // 这个catch用于请求是否出问题了
+        // 这个catch用于请求是否出问题了？？有问题！！！
         axios(option).then(res => {
             console.log(res.data)
+            console.log(res.data.status)
             if(res.data.status === 'ok') {
-                Message.success(res.data.msg)
+                Message.success(res.data.msg || '获取用户信息成功')
                 resolve(res.data)
             } else {
                 Message.error(res.data.msg)
@@ -39,6 +40,8 @@ export default function request(url, type = 'GET', data = {}) {
                 reject(res.data)
             }
         }).catch(err => {
+            // 我测试了下发现这个catch是捕获第一个then的异常的！
+            console.log(err)
             Message.error('网络异常')
             reject({ msg: '网络异常' })
         })
