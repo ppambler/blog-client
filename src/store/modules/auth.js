@@ -6,7 +6,8 @@ const state = {
 }
 
 const getters = {
-
+    user: state => state.user,
+    isLogin: state => state.isLogin
 }
 
 const mutations = {
@@ -52,8 +53,8 @@ const actions = {
 }
 
 export default {
-    state: {},
-    getters: {},
-    mutations: {},
-    actions: {}
+    state,
+    getters,
+    mutations,
+    actions
 }
