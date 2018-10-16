@@ -10,6 +10,13 @@
               <p>{{blog.description}}</p>
           </router-link>
       </section>
+      <section class="pagination">
+          <el-pagination 
+            layout="prev, pager, next"
+            :total="total"
+            @current-change="onPageChange">
+          </el-pagination>
+      </section>
   </div>
 </template>
 

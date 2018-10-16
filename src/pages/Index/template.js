@@ -10,17 +10,30 @@ window.blog = blog
 export default {
     data () {
       return {
-        blogs: []
+        blogs: [],
+        total: 0,
+        page: 1
       }
     },
+    // 有种初始化的味道，这是在模板还未渲染好之前发送请求获取数据
     created() {
       blog.getIndexBlogs().then(res => {
         console.log(res)
         this.blogs = res.data
+        this.total = res.total
+        this.page = res.page
       })
     },
     methods: {
-     
+     onPageChange(newPage) {
+       console.log(newPage)
+       blog.getIndexBlogs({ page: newPage }).then(res => {
+         console.log(res)
+         this.blogs = res.data
+         this.total = res.total
+         this.page = res.page
+       })
+     }
       
     }
 }
