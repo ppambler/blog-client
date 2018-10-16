@@ -2,7 +2,7 @@
   <div id="edit">
     <h1>创建文章</h1>
     <h3>文章标题</h3>
-    <el-input ref="titleStr" v-model="title" @input="onInputTitle" v-bind:style="maxStyle" maxlength=30></el-input>
+    <el-input ref="titleStr" v-model="title" @input="onInputTitle" maxlength=30></el-input>
     <p class="msg">还可以输入{{30-title.length}}个字，限30个字</p>
     <h3>内容简介</h3>
     <el-input ref="descriptionStr" type="textarea" v-model="description" @input="onInputDescription" :autosize="{ minRows: 2, maxRows: 6}" maxlength=300></el-input>
