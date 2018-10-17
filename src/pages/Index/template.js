@@ -11,8 +11,8 @@ export default {
     data () {
       return {
         blogs: [],
-        total: 0,
-        page: 1
+        page: 1,
+        total: 0
       }
     },
     // 有种初始化的味道，这是在模板还未渲染好之前发送请求获取数据
@@ -23,8 +23,10 @@ export default {
         this.blogs = res.data
         this.total = res.total
         this.page = res.page
+        console.log(this.page)
       })
     },
+  
     methods: {
      onPageChange(newPage) {
        console.log(newPage)
