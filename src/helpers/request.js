@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Message } from 'element-ui'
 
 // 它的存在给你使用相对路径的机会
-axios.defaults.baseURL = 'http://blog-server.hunger-valley.com'
+axios.defaults.baseURL = 'https://blog-server.hunger-valley.com'
 // 约定数据上传的格式，这可以是json格式的额，随你喜欢
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 // 允许跨域
