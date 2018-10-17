@@ -1,4 +1,5 @@
 import marked from 'marked'
+import blog from '@/api/blog'
 
 export default {
     data () {
